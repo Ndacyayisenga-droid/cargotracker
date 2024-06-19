@@ -38,6 +38,10 @@ jobs:
         name: Build Docs
         run: mvn -B clean package
 
+      - id: copy-index
+        name: Copy index.html to Home Directory
+        run: cp target/generated-docs/index.html $HOME
+
       - id: create-gh-pages-artifact
         name: Create GitHub Pages Artifact
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'push'
@@ -65,4 +69,3 @@ jobs:
       - id: deployment
         name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
-
