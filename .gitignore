@@ -1,17 +1,18 @@
-target
-.settings
-.metadata
-.factorypath
-.classpath
-.project
+# IntelliJ
+/.idea
 *.iml
-.idea/
-.vscode/
-nb-*
-bin/
-*.log
-*.log-*
-data
-.DS_Store
-cargo-tracker-test-data
-nbactions.xml
+
+# Eclipse
+/.settings
+*.classpath
+*.project
+
+# Maven
+/target
+
+# NodeJS
+/node
+/node_modules
+
+# Project specific
+local-antora-playbook.yml
